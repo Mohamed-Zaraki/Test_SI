@@ -1,23 +1,37 @@
 package Test;
 
+import java.util.List;
+
 public class Salle {
+	 private Batiment batiment;
+	 private String Nom_Salle;
+	
+	 public Salle(Batiment batiment)
+	 {
+		 this.Nom_Salle=Nom_Salle;
+		 this.batiment=batiment;
+	 }
+	 
 
 	
-	private static  int i = 0;
-	public static String getNextSalle(Batiment batiment) throws NbrMaxException {
-        if(batiment.getNbrMax() <i)
-        {
-        	i = 0 ;
-        	throw new NbrMaxException("Le nombre de salle est limité!!");
-        }
-		i++;
-        return String.format("Salle %02d", i);
-    }
-	public static int getI() {
-		return i;
+	public Batiment getBatiment() {
+		return batiment;
 	}
-	public static void setI(int i) {
-		Salle.i = i;
+	public void setBatiment(Batiment batiment) {
+		this.batiment = batiment;
 	}
+
+
+
+	public String getNom_Salle() {
+		return Nom_Salle;
+	}
+
+
+
+	public void setNom_Salle(String nom_Salle) {
+		Nom_Salle = nom_Salle;
+	}
+	
 	
 }
